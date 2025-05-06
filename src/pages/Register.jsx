@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../css/Register.css'; // We'll reuse styles from Login.css
+import '../css/Register.css'; // Reusing styles
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -9,14 +9,48 @@ export default function Register() {
     confirmPassword: ''
   });
 
+  const [message, setMessage] = useState('');
+  const [messageType, setMessageType] = useState(''); // 'success' or 'error'
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Registering user:', formData);
-    // Here you would handle form validation and backend API call
+
+    const { username, email, password, confirmPassword } = formData;
+
+    if (!username || !email || !password || !confirmPassword) {
+      setMessage('All fields are required.');
+      setMessageType('error');
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setMessage('Passwords do not match.');
+      setMessageType('error');
+      return;
+    }
+
+    if (localStorage.getItem(username)) {
+      setMessage('User already exists!');
+      setMessageType('error');
+      return;
+    }
+
+    // Save user to localStorage
+    localStorage.setItem(username, JSON.stringify({ email, password }));
+    setMessage('Registration successful!');
+    setMessageType('success');
+
+    // Optional: clear form
+    setFormData({
+      username: '',
+      email: '',
+      password: '',
+      confirmPassword: ''
+    });
   };
 
   return (
@@ -62,6 +96,12 @@ export default function Register() {
           <a href="/login"> Login</a>
         </div>
       </form>
+
+      {message && (
+        <p className={`login-message ${messageType}`}>
+          {message}
+        </p>
+      )}
     </div>
   );
 }
