@@ -12,20 +12,7 @@ function NavBar() {
         <Link to="/teams">Teams</Link>
       </div>
     </nav>
-      <nav className="hamburger">
-        <div className="symbol">
-            < RxHamburgerMenu/>
-        </div>
-        <div className="hamlinks">
-          <Link to="/">Home</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/profile">Profile</Link>
-          <Link to="/schedule">Schedule</Link>
-          <Link to="/teams">Teams</Link>
-        </div>
-
-
-      </nav></>
+  </>
 
   )
 }
