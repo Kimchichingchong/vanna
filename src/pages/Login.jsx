@@ -11,23 +11,27 @@ export default function Login() {
   };
 
   return (
-    <div className="login-container">
+    <><div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
         <h2>Login</h2>
         <input
           type="text"
           placeholder="Username"
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
+          onChange={(e) => setUsername(e.target.value)} />
         <input
           type="password"
           placeholder="Password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+          onChange={(e) => setPassword(e.target.value)} />
         <button type="submit">Login</button>
+        <div className="register-link">
+          <span>Don't have an account?</span>
+          <a href="/register"> Register</a>
+        </div>
       </form>
     </div>
+   
+    </>
   );
 }

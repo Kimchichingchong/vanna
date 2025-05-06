@@ -64,3 +64,19 @@ body, html {
 .login-form button:hover {
   background: linear-gradient(to bottom, #6bb7ff, #3d86ff);
 }
+.register-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.register-link a {
+  color: #58a9ff;
+  margin-left: 5px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
