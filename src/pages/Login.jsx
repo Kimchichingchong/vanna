@@ -2,37 +2,38 @@ import React, { useState } from 'react';
 import '../css/Login.css'; 
 import { login } from '../scripts/Auth.js';
 import { Link } from 'react-router-dom';  
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message,setMessage] = useState('');
-
+  const navigate = useNavigate();
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const result = login(username,password);
     setMessage(result);
   const [message, setMessage] = useState('');
-  const [messageType, setMessageType] = useState(''); // to track message type ('error' or 'success')
+  const [messageType, setMessageType] = useState(''); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Basic validation check
     if (!username || !password) {
       setMessage('Please enter both username and password.');
-      setMessageType('error'); // Set message type as 'error'
+      setMessageType('error'); 
       return;
     }
 
-    // Simulate login API call
-    const result = login(username, password); // This should be replaced with actual login logic
+    const result = login(username, password); 
     if (result === "Invalid username or password.") {
       setMessage(result);
-      setMessageType('error'); // Set message type as 'error'
+      setMessageType('error'); 
     } else {
-      setMessage(result); // Assuming successful login message comes from `login`
-      setMessageType('success'); // Set message type as 'success'
+      setMessage(result); 
+      setMessageType('success'); 
+      navigate('/profile');
     }
   };
 
@@ -57,7 +58,6 @@ export default function Login() {
         </div>
       </form>
 
-      {/* Render message conditionally based on messageType */}
       {message && (
         <p className={`login-message ${messageType}`}>
           {message}
