@@ -31,7 +31,7 @@ export default function Login() {
       setMessage(result);
       setMessageType('error'); // Set message type as 'error'
     } else {
-      setMessage(result); // Assuming successful login message comes from `login`
+      setMessage(result); // Assuming successful login message comes from login
       setMessageType('success'); // Set message type as 'success'
     }
   };
