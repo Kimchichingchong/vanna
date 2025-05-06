@@ -5,15 +5,22 @@ import { login } from '../scripts/Auth.js';
 export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const result = login(username,password);
-    console.log(result);
+
+    if (!username || !password) {
+      setMessage('Please enter both username and password.');
+      return;
+    }
+
+    const result = login(username, password);
+    setMessage(result); // Set the message based on the login result
   };
 
   return (
-    <><div className="login-container">
+    <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
         <h2>Login</h2>
         <input
@@ -32,8 +39,9 @@ export default function Login() {
           <a href="/register"> Register</a>
         </div>
       </form>
+
+      {/* Add this to render the message */}
+      {message && <p className="login-message">{message}</p>} {/* Message shown below the form */}
     </div>
-   
-    </>
   );
 }
