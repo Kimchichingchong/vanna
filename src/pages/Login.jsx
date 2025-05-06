@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/Login.css'; 
+import { login } from '../scripts/Auth.js';
 
 export default function Login() {
   const [username, setUsername] = useState('');
@@ -7,7 +8,8 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Logging in with:', username, password);
+    const result = login(username,password);
+    console.log(result);
   };
 
   return (

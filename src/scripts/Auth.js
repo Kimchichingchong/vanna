@@ -1,12 +1,27 @@
-// Login user
-function login() {
-    const username = document.getElementById("loginUsername").value;
-    const password = document.getElementById("loginPassword").value;
-    const storedPassword = localStorage.getItem(username);
+// Register a new user
+export function register(username, password, email, mobile) {
+    if (localStorage.getItem(username)) {
+      return "User already exists!";
+    }
   
-    if (storedPassword === password) {
-      document.getElementById("message").innerText = "Login successful!";
+    const userData = {
+      password,
+      email,
+      mobile
+    };
+  
+    localStorage.setItem(username, JSON.stringify(userData));
+    return "Registration successful!";
+  }
+  
+  // Log in an existing user
+  export function login(username, password) {
+    const storedUser = JSON.parse(localStorage.getItem(username));
+  
+    if (storedUser && storedUser.password === password) {
+      return "Login successful!";
     } else {
-      document.getElementById("message").innerText = "Invalid username or password.";
+      return "Invalid username or password.";
     }
   }
+  
