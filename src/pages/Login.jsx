@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import '../css/Login.css'; 
 import { login } from '../scripts/Auth.js';
+import { Link } from 'react-router-dom';  
 
 export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [message,setMessage] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const result = login(username,password);
-    console.log(result);
+    setMessage(result);
   };
 
   return (
@@ -29,7 +31,7 @@ export default function Login() {
         <button type="submit">Login</button>
         <div className="register-link">
           <span>Don't have an account?</span>
-          <a href="/register"> Register</a>
+          <Link To="/register"> Register</Link>
         </div>
       </form>
     </div>

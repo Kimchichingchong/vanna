@@ -6,6 +6,7 @@ import Schedule from "./pages/Schedule"
 import Login from "./pages/Login"
 import Teams from "./pages/Teams"
 import Profile from "./pages/Profile"
+import Register from "./pages/Register"
 import './css/App.css'
 function App() {
   
@@ -21,7 +22,7 @@ function App() {
                  <Route path="/login" element={<Login />}/>
                  <Route path="/profile" element={<Profile />}/>
                  <Route path="/teams" element={<Teams />}/>
-                 
+                 <Route path="/register" element={<Register />} />
               </Routes>
         </main>
         </div>
