@@ -13,17 +13,27 @@ export default function Login() {
     const result = login(username,password);
     setMessage(result);
   const [message, setMessage] = useState('');
+  const [messageType, setMessageType] = useState(''); // to track message type ('error' or 'success')
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Basic validation check
     if (!username || !password) {
       setMessage('Please enter both username and password.');
+      setMessageType('error'); // Set message type as 'error'
       return;
     }
 
-    const result = login(username, password);
-    setMessage(result); // Set the message based on the login result
+    // Simulate login API call
+    const result = login(username, password); // This should be replaced with actual login logic
+    if (result === "Invalid username or password.") {
+      setMessage(result);
+      setMessageType('error'); // Set message type as 'error'
+    } else {
+      setMessage(result); // Assuming successful login message comes from `login`
+      setMessageType('success'); // Set message type as 'success'
+    }
   };
 
   return (
@@ -47,8 +57,12 @@ export default function Login() {
         </div>
       </form>
 
-      {/* Add this to render the message */}
-      {message && <p className="login-message">{message}</p>} {/* Message shown below the form */}
+      {/* Render message conditionally based on messageType */}
+      {message && (
+        <p className={`login-message ${messageType}`}>
+          {message}
+        </p>
+      )}
     </div>
   );
 }
