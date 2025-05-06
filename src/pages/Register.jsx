@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../css/Register.css'; // Reusing styles
+import '../css/Register.css';
+import { register } from '../scripts/Auth.js'; // ✅ Import the shared function
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -10,7 +11,7 @@ export default function Register() {
   });
 
   const [message, setMessage] = useState('');
-  const [messageType, setMessageType] = useState(''); // 'success' or 'error'
+  const [messageType, setMessageType] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -33,24 +34,20 @@ export default function Register() {
       return;
     }
 
-    if (localStorage.getItem(username)) {
-      setMessage('User already exists!');
-      setMessageType('error');
-      return;
+    // ✅ Use the shared register() function
+    const result = register(username, password, email, null); // mobile is optional or null
+
+    setMessage(result);
+    setMessageType(result === 'Registration successful!' ? 'success' : 'error');
+
+    if (result === 'Registration successful!') {
+      setFormData({
+        username: '',
+        email: '',
+        password: '',
+        confirmPassword: ''
+      });
     }
-
-    // Save user to localStorage
-    localStorage.setItem(username, JSON.stringify({ email, password }));
-    setMessage('Registration successful!');
-    setMessageType('success');
-
-    // Optional: clear form
-    setFormData({
-      username: '',
-      email: '',
-      password: '',
-      confirmPassword: ''
-    });
   };
 
   return (
