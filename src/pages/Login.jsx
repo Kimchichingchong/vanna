@@ -12,10 +12,22 @@ export default function Login() {
     e.preventDefault();
     const result = login(username,password);
     setMessage(result);
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!username || !password) {
+      setMessage('Please enter both username and password.');
+      return;
+    }
+
+    const result = login(username, password);
+    setMessage(result); // Set the message based on the login result
   };
 
   return (
-    <><div className="login-container">
+    <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
         <h2>Login</h2>
         <input
@@ -34,8 +46,10 @@ export default function Login() {
           <Link To="/register"> Register</Link>
         </div>
       </form>
+
+      {/* Add this to render the message */}
+      {message && <p className="login-message">{message}</p>} {/* Message shown below the form */}
     </div>
-   
-    </>
   );
+}
 }
