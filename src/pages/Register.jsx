@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../css/Register.css';
 import { register } from '../scripts/Auth.js'; // ✅ Import the shared function
+import { useNavigate } from 'react-router-dom';
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -12,6 +13,7 @@ export default function Register() {
 
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState('');
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -47,6 +49,7 @@ export default function Register() {
         password: '',
         confirmPassword: ''
       });
+      navigate('/login');
     }
   };
 
