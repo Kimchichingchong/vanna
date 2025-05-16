@@ -1,0 +1,154 @@
+.schedule-container {
+  background: url('https://image.freepik.com/free-photo/black-white-image-film-cameras-that-had-been-popular-past_1484-94.jpg') no-repeat center center/cover;
+  color: rgb(0, 0, 0);
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.day-selector {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.day-button {
+  background-color: #131210;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.day-button.active {
+  box-shadow: 0px 0px 10px 4px #68666a;
+  background-color: #ffffff;
+  color: #131210;
+}
+
+.schedule-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: rgb(114, 108, 108);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-card {
+  background: white;
+  color: black;
+  padding: 10px;
+  border-radius: 20px;
+  width: 260px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.timeline-card.left {
+  margin-right: 60px;
+  border-top-left-radius: 0;
+}
+
+.timeline-card.right {
+  margin-left: 60px;
+  border-top-right-radius: 0;
+}
+
+.time-label {
+  background: #0c0c0c;
+  color: white;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.event-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.location {
+  color: rgb(6, 6, 6);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: black;
+  border: 5px solid white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.schedule-card {
+  background: linear-gradient(to bottom right, #fefefe, #dcdcdc);
+  border-radius: 20px;
+  padding: 20px;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.schedule-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom right, #ffffff, #eaeaea);
+}
+
+.schedule-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.schedule-card p {
+  font-size: 0.95rem;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.schedule-card:hover h3 {
+  color: #111;
+}
+
+.schedule-card:hover p {
+  color: #333;
+}
+

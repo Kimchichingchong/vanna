@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Alex Smith",
+        "portfolio": "Head of Marketing",
+        "profile_link": "https://example.com/alexsmith",
+        "role": "head"
+    },
+    {
+        "name": "Jordan Lee",
+        "portfolio": "Subhead of Design",
+        "profile_link": "https://example.com/jordanlee",
+        "role": "subhead"
+    },
+    {
+        "name": "Taylor Morgan",
+        "portfolio": "Head of Product",
+        "profile_link": "https://example.com/taylormorgan",
+        "role": "head"
+    },
+    {
+        "name": "Casey Riley",
+        "portfolio": "Subhead of Development",
+        "profile_link": "https://example.com/caseyriley",
+        "role": "subhead"
+    },
+    {
+        "name": "Jamie Avery",
+        "portfolio": "Head of Sales",
+        "profile_link": "https://example.com/jamieavery",
+        "role": "head"
+    },
+    {
+        "name": "Skyler Peyton",
+        "portfolio": "Subhead of HR",
+        "profile_link": "https://example.com/skylerpeyton",
+        "role": "subhead"
+    },
+    {
+        "name": "Quinn Drew",
+        "portfolio": "Head of Support",
+        "profile_link": "https://example.com/quinndrew",
+        "role": "head"
+    },
+    {
+        "name": "Kendall Reese",
+        "portfolio": "Subhead of QA",
+        "profile_link": "https://example.com/kendallreese",
+        "role": "subhead"
+    },
+    {
+        "name": "Parker Rowan",
+        "portfolio": "Head of Design",
+        "profile_link": "https://example.com/parkerrowan",
+        "role": "head"
+    },
+    {
+        "name": "Emerson Blake",
+        "portfolio": "Subhead of Marketing",
+        "profile_link": "https://example.com/emersonblake",
+        "role": "subhead"
+    },
+    {
+        "name": "Cameron Finley",
+        "portfolio": "Head of Engineering",
+        "profile_link": "https://example.com/cameronfinley",
+        "role": "head"
+    },
+    {
+        "name": "Drew Kendall",
+        "portfolio": "Subhead of Analytics",
+        "profile_link": "https://example.com/drewkendall",
+        "role": "subhead"
+    },
+    {
+        "name": "Morgan Casey",
+        "portfolio": "Head of Analytics",
+        "profile_link": "https://example.com/morgancasey",
+        "role": "head"
+    },
+    {
+        "name": "Riley Taylor",
+        "portfolio": "Subhead of Sales",
+        "profile_link": "https://example.com/rileytaylor",
+        "role": "subhead"
+    },
+    {
+        "name": "Reese Parker",
+        "portfolio": "Head of Operations",
+        "profile_link": "https://example.com/reeseparker",
+        "role": "head"
+    },
+    {
+        "name": "Blake Cameron",
+        "portfolio": "Subhead of Engineering",
+        "profile_link": "https://example.com/blakecameron",
+        "role": "subhead"
+    },
+    {
+        "name": "Phillips Turner",
+        "portfolio": "Head of HR",
+        "profile_link": "https://example.com/phillipsturner",
+        "role": "head"
+    },
+    {
+        "name": "Adams Baker",
+        "portfolio": "Subhead of Product",
+        "profile_link": "https://example.com/adamsbaker",
+        "role": "subhead"
+    },
+    {
+        "name": "Young Hill",
+        "portfolio": "Head of Content",
+        "profile_link": "https://example.com/younghill",
+        "role": "head"
+    },
+    {
+        "name": "Nelson Roberts",
+        "portfolio": "Subhead of Support",
+        "profile_link": "https://example.com/nelsonroberts",
+        "role": "subhead"
+    }
+]

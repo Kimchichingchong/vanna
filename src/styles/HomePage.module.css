@@ -1,0 +1,60 @@
+.hero {
+ 
+  height: 100vh; background: url('https://image.freepik.com/free-photo/black-white-image-film-cameras-that-had-been-popular-past_1484-94.jpg') no-repeat center center/cover;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.heroContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 1rem;
+}
+
+.heroContent h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.exploreBtn {
+  background: linear-gradient(to right, #0a0a0a, #f0f0f0);
+  color: white;
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.exploreBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 992px) {
+  .heroContent h1 {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.8rem;
+  }
+
+  .exploreBtn {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+}
+

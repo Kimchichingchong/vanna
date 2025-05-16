@@ -1,0 +1,132 @@
+.team-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #000000;
+}
+
+.team-page h1 {
+  margin: 20px 0;
+  color: #f9f6f6;
+  text-align: center;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.team-card {
+  width: 260px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, rgb(86, 84, 84) 65%, #090909);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  color: #dfdfdf;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.team-card h3 {
+  margin: 10px 0 5px;
+}
+
+.team-card p {
+  font-size: 14px;
+  color: #e0e0e0;
+  margin-bottom: 12px;
+}
+
+.social-icons {
+  margin-bottom: 15px;
+}
+
+.social-icons .icon {
+  margin: 0 6px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.role-btn {
+  background: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 6px 12px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.show-name {
+  background: #000000;
+  color: white;
+  font-weight: 600;
+  padding: 6px;
+  border-radius: 5px;
+}
+.team-card {
+  width: 260px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, rgb(65, 61, 61) 65%, #6c6c6c);
+  box-shadow: 0 4px 10px rgb(103 50 186 / 0.4);
+  color: #dcdada;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.team-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(248, 248, 248, 0.6);
+}
+
+
+
+.team-card:hover .avatar {
+  box-shadow: 0 0 15px 3px #f0f0f0;
+}
+
+
+
+.team-card:hover h3 {
+  color: #ebebeb;
+}
+
+
+
+.team-card:hover p {
+  color: #fbf9fe;
+}
+
+
+
+
+
+.social-icons .icon:hover {
+  color: #d7cbcb;
+}
+
+
+.role-btn:hover {
+  background-color: #cfcfcf;
+}
+
+
+
+.team-card:hover .show-name {
+  background-color: #ffffff;
+}
